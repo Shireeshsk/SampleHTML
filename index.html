@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap All Components Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar {
+      min-width: 220px;
+      max-width: 220px;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+    }
+    .sidebar .nav-link {
+      color: #333;
+    }
+    .main-content {
+      flex: 1;
+      padding: 2rem;
+      background: #f4f6f8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">ContactUs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">AboutUs</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Layout -->
+  <div class="container-fluid d-flex p-0">
+    <!-- Sidebar -->
+    <nav class="sidebar d-flex flex-column flex-shrink-0 p-3">
+      <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+        <span class="fs-4">Menu</span>
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link active">Dashboard</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">Orders</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">Customers</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">Reports</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">Pricing</a>
+        </li>
+      </ul>
+      <hr>
+      <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
+          <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
+          <strong>John</strong>
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="main-content w-100">
+      <!-- Hero Section -->
+      <div class="p-5 mb-4 bg-primary text-white rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Welcome to Your Dashboard</h1>
+          <p class="col-md-8 fs-4">Manage your content, view albums, pricing, and more at a glance with this Bootstrap-powered dashboard layout.</p>
+          <button class="btn btn-outline-light btn-lg" type="button">View Reports</button>
+        </div>
+      </div>
+      <!-- Cards (Album/Pricing/Features) -->
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <img src="https://source.unsplash.com/random/400x200?business" class="card-img-top" alt="Business">
+            <div class="card-body">
+              <h5 class="card-title">Feature One</h5>
+              <p class="card-text">This card highlights a key feature or content panel in your dashboard.</p>
+              <a href="#" class="btn btn-primary">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <img src="https://source.unsplash.com/random/400x200?technology" class="card-img-top" alt="Technology">
+            <div class="card-body">
+              <h5 class="card-title">Feature Two</h5>
+              <p class="card-text">Great for displaying summary stats or visualizing your album/pricing layout.</p>
+              <a href="#" class="btn btn-primary">See More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <img src="https://source.unsplash.com/random/400x200?finance" class="card-img-top" alt="Finance">
+            <div class="card-body">
+              <h5 class="card-title">Feature Three</h5>
+              <p class="card-text">Show your pricing model or feature set with stylish Bootstrap cards.</p>
+              <a href="#" class="btn btn-primary">See More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Pricing Section Example -->
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header">
+              Basic
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">$19/mo</h5>
+              <p class="card-text">Entry-level pricing for new users—get started today.</p>
+              <a href="#" class="btn btn-outline-primary">Choose</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header">
+              Pro
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">$49/mo</h5>
+              <p class="card-text">Advanced features for professional users; unlimited access.</p>
+              <a href="#" class="btn btn-primary">Choose</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header">
+              Enterprise
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">$99/mo</h5>
+              <p class="card-text">Full access to all analytics, support, and premium tools.</p>
+              <a href="#" class="btn btn-outline-dark">Choose</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-auto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5>Company Name</h5>
+          <p>© 2025 All rights reserved.</p>
+        </div>
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">Pricing</a></li>
+            <li><a href="#" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p>Email: info@example.com<br>Phone: +1 234 567 89</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
